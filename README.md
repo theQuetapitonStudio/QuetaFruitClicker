@@ -1,2 +1,4 @@
-# FruitClicker
-The fruit clicker
+# Queta-fruit Clicker!!!
+
+Normalmente atualizara a cada mês
+
