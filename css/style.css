@@ -1,0 +1,113 @@
+body {
+    background: #101010;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 40px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    user-select: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform .1s ease;
+}
+
+img:active {
+    transform: scale(0.92);
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+#aicontentalert {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 10px;
+}
+
+#tutorialbtn,
+#openConfig,
+#configPanel button {
+    background: #1f1f1f;
+    border: 2px solid #3d3d3d;
+    padding: 15px 20px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 14px;
+}
+
+#tutorialbtn:hover,
+#openConfig:hover,
+#configPanel button:hover {
+    background: #333;
+    border-color: #777;
+}
+
+#tutorialbtn:active,
+#openConfig:active,
+#configPanel button:active {
+    transform: scale(0.95);
+}
+
+
+#openConfig {
+    margin-top: 20px;
+}
+
+
+/* ===== CONFIG PANEL BONITO ===== */
+
+#configPanel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background: rgba(20, 20, 20, 0.9);
+    backdrop-filter: blur(8px);
+    border: 1px solid #444;
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    display: none;
+    z-index: 999;
+    width: 300px;
+    text-align: center;
+    animation: fadeIn 0.2s ease forwards;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, -50%) scale(0.7); }
+    to   { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+#configPanel button {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+#configPanel input[type="file"] {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#resetGame {
+    background: rgb(120, 0, 0);
+    border-color: rgb(180, 0, 0);
+}
+
+#resetGame:hover {
+    background: rgb(150, 0, 0);
+    border-color: rgb(230, 0, 0);
+}

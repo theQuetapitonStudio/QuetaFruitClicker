@@ -1,57 +1,46 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>Fruit Clicker - Jogo Clicker de Frutas</title>
-  <link rel="shortcut icon" href="imgs/Manga.png" type="image/x-icon">
-  <meta name="description" content="Fruit Clicker é um jogo online onde você clica em frutas para ganhar pontos, desbloquear upgrades e evoluir sua fazenda de frutas." />
-  <meta name="google-site-verification" content="nbBX8XbX38upExMwTp28bO-fMAVnFkuXJzwCHrQlKGM" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Fruit Clicker - Jogo Clicker de Frutas" />
-  <meta property="og:description" content="Clique em frutas, acumule pontos e desbloqueie frutas!!" />
-  <meta property="og:image" content="https://thequetapitonstudio.github.io/FruitClicker/imgs/Manga.png" />
-  <meta property="og:url" content="https://thequetapitonstudio.github.io/FruitClicker/" />
-  <meta property="og:type" content="website" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Fruit Clicker" />
-  <meta name="twitter:description" content="Jogo clicker de frutas - clique, evolua e desbloqueie novas frutas." />
-  <meta name="twitter:image" content="https://thequetapitonstudio.github.io/FruitClicker/imgs/Manga.png" />
-
-  <link rel="canonical" href="https://thequetapitonstudio.github.io/FruitClicker/" />
-  <link rel="stylesheet" href="css/index.css" />
+    <meta charset="UTF-8">
+    <title>QuetaFruit Clicker</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>Fruit Clicker <strong style="color: #bcbcff;">TEMPORADA 1: <strong style="color: #d503ff;">UVA</strong></strong></h1>
-  <br> <br>
 
-  <button id="fruitList" onclick="window.location.href = 'fruit.list.html'">Lista de frutas</button><br>
+    <h1>QuetaFruit Clicker</h1>
 
-  <br>
-  <div id="tutorial">
-    <p id="tutorialmsg">Clique na <span style="color: hwb(229 0% 0%);">banana</span></p>
-  </div>
+    <img id="fruitImg" src="imgs/apple.png" alt="Fruit">
 
-  <img src="imgs/banana.png" id="fruitimg" alt="Banana do jogo Fruit Clicker" />
-  <p id="clickmsg">Clicks: 0</p>
-  <p id="multimsg">Multiplicador: 1X</p>
-  <p id="fruitmsg">Fruta: Banana</p>
-  
-  <br><br>
-  <div id="potato-truckHUD" style="display: none;">
-    <p>DÊ <strong style="color: blueviolet;">1000</strong> CLICKS PARA O <strong style="color: red"> EROMADEITE</strong> PARA ELE TE DAR UM <strong>BONUS!</strong></p>
-    <img src="imgs/POTATO-TRUCK.gif" id="potatotruckIMG">
-  </div>
-  <br>
+    <h2>QtapCoins: <span id="count">0</span></h2>
+    <h2>QtapMulti: <span id="mcount">?X</span></h2>
+    <br>
 
+    <button id="tutorialbtn" target="_blank">Tutorial</button>
+    <button id="openConfig">Configurações</button>
 
-  <button id="lbbtn">Comprar Lucky Block (500 clicks)</button>
+    <div id="configPanel" class="hidden">
+        <h2>Configurações</h2>
 
-  <script type="module" src="./scripts/admSend.js"></script>
-  <script type="module" src="./scripts/index.js"></script>
+        <button id="saveFile">Salvar Em Arquivo</button>
+        <br><br>
+
+        <input type="file" id="importFile" accept=".json">
+        <button id="importBtn">Importar Save</button>
+        <br><br>
+
+        <button id="resetGame" style="color: red;">Resetar Progresso</button>
+
+        <br><br>
+        <button id="closeConfig">Fechar</button>
+    </div>
+
+    <footer id="aicontentalert">
+        <p>Esse Jogo contém imagens geradas artificialmente 
+            <a href="sobre/aicontentsaibamais.html" target="_blank">Saiba mais</a>
+        </p>
+    </footer>
+
+    <script type="module" src="scripts/updates/natal.js"></script>
+    <script type="module" src="scripts/game.js"></script>
 </body>
 </html>
